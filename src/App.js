@@ -43,7 +43,7 @@ class App extends Component {
 
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="ny.jpg" alt="New York"></img>
+                        <img src={process.env.PUBLIC_URL + '/ny.jpg'} alt="New York"></img>
                         <div class="carousel-caption">
                             <h3>Featured</h3>
                         </div>
@@ -52,7 +52,7 @@ class App extends Component {
                         if(concert.featured) {
                             return (
                                 <div class="item">
-                                    <img src={concert.featuredImage} alt="Something"></img>
+                                    <img src={process.env.PUBLIC_URL + '/' + concert.featuredImage} alt="Something"></img>
                                     <div class="carousel-caption">
                                         <h3>{concert.name}</h3>
                                     </div>
