@@ -135,14 +135,7 @@ module.exports = {
         oneOf: [
           // "url" loader works just like "file" loader but it also embeds
           // assets smaller than specified size as data URLs to avoid requests.
-            {
-                test: /\.js$/,
-                loader: 'safe-externals-loader',
-                query: JSON.stringify({
-                    react: ['React'],
-                    'react-dom': ['ReactDOM']
-                })
-            },
+         
           {
             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
             loader: require.resolve('url-loader'),
